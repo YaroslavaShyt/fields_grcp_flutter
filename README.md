@@ -40,16 +40,16 @@ For example, your server main-file can be like this:
 #### 4. Create a client
 Your client need to connect to your server, so here is the function:
 
-`Future<FieldResponse> getFields(String value) async {`<br />
+`Future<FieldResponse> getFields(String value) async {`  <br />
 `final channel = ClientChannel('000.000.0.0',` //your host<br />
-`port: 8080,`<br />
-`options: const ChannelOptions(credentials: ChannelCredentials.insecure()));`<br />
-`final client = FieldServiceClient(channel);`<br />
-`final request = FieldRequest()..data = value;``<br />
-`final response = await client.getFields(request);``<br />
-`await channel.shutdown();``<br />
-`return response;``<br />
-`}``<br />
+`port: 8080,` <br />
+`options: const ChannelOptions(credentials: ChannelCredentials.insecure()));` <br />
+`final client = FieldServiceClient(channel);` <br />
+`final request = FieldRequest()..data = value;` <br />
+`final response = await client.getFields(request);` <br />
+`await channel.shutdown();` <br />
+`return response;` <br />
+`}` <br />
 Note!!! If you are running this app on emulator, you can write 'localhost' instead of '000.000.0.0'. But if you are running it on device - you should write your host(you can find it while writing `ipconfig` in your terminal)
 
 #### 5. Create connection to server
