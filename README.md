@@ -50,7 +50,7 @@ Your client need to connect to your server, so here is the function:
 `await channel.shutdown();``<br />
 `return response;``<br />
 `}``<br />
-Note!!! If you are running this app on emulator, you can write 'localhost' instead of '000.000.0.0'. But if you are running it on device - you should write your host(you can find it while whiting 'ipconfig' in your terminal)
+Note!!! If you are running this app on emulator, you can write 'localhost' instead of '000.000.0.0'. But if you are running it on device - you should write your host(you can find it while writing `ipconfig` in your terminal)
 
 #### 5. Create connection to server
 
