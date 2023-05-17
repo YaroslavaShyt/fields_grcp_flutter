@@ -1,16 +1,17 @@
-# fields_grcp
+# Flutter gRPC App
 
-A new Flutter project.
+This is an app that demonstrates the creation and usage of client-server architecture(dart-server and flutter-client)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Packages:
+- grpc: ^3.1.0
+- convert: ^3.1.1
+- csv: ^5.0.2
 
-A few resources to get you started if this is your first Flutter project:
+### Libraries:
+- 'dart:convert';
+- 'dart:io';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Additional requirements:
+Protocol Buffer Compiler, source: https://grpc.io/docs/protoc-installation/
