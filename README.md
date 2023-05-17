@@ -40,29 +40,28 @@ For example, your server main-file can be like this:
 #### 4. Create a client
 Your client need to connect to your server, so here is the function:
 
-Future<FieldResponse> getFields(String value) async {
-final channel = ClientChannel('000.000.0.0', //your host
-port: 8080,
-options: const ChannelOptions(credentials: ChannelCredentials.insecure()));
-final client = FieldServiceClient(channel);
-
-final request = FieldRequest()..data = value;
-final response = await client.getFields(request);
-await channel.shutdown();
-return response;
-}
+`Future<FieldResponse> getFields(String value) async {`<br />
+`final channel = ClientChannel('000.000.0.0',` //your host<br />
+`port: 8080,`<br />
+`options: const ChannelOptions(credentials: ChannelCredentials.insecure()));`<br />
+`final client = FieldServiceClient(channel);`<br />
+`final request = FieldRequest()..data = value;``<br />
+`final response = await client.getFields(request);``<br />
+`await channel.shutdown();``<br />
+`return response;``<br />
+`}``<br />
 Note!!! If you are running this app on emulator, you can write 'localhost' instead of '000.000.0.0'. But if you are running it on device - you should write your host(you can find it while whiting 'ipconfig' in your terminal)
 
 #### 5. Create connection to server
 
 In my code I connect to server when user presses the button:
 
-OutlinedButton(onPressed: () async{
-final response = await getFields(_controller.text); //exactly this line
-final splitData = response.message.split('\n');
-setState(() {
-data = splitData;
-});
+`OutlinedButton(onPressed: () async{``<br />
+`final response = await getFields(_controller.text); //exactly this line``<br />
+`final splitData = response.message.split('\n');``<br />
+`setState(() {``<br />
+`data = splitData;``<br />
+`});``<br />
 
 ## Run
 
