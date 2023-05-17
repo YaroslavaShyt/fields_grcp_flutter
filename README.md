@@ -29,10 +29,10 @@ E:\protoc-22.5-win64\bin\protoc.exe --dart_out=grpc:lib/src --proto_path=lib ser
 #### 3. Create a server-part
 For example, your server main-file can be like this:
 
-`Future<void> main() async {'\n'
-final server = Server([FieldService()]);'\n'  
-await server.serve(port: 8080);'\n'  
-print('Server listening on port ${server.port}');'\n'  
+`Future<void> main() async {\n
+final server = Server([FieldService()]);\n 
+await server.serve(port: 8080);\n 
+print('Server listening on port ${server.port}');\n  
 }`
 
 (You can search for details for this clause in my lib/server/ directory)
